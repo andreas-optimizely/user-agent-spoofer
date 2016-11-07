@@ -8,15 +8,7 @@ const gulp = require("gulp"),
 const DEST = 'build',
       IMAGE_DEST = 'build/images';
 
-gulp.task("default", function () {
-  return gulp.src("src/js/index.js")
-    .pipe(babel({presets: ['es2015']}))
-    .pipe(concat("app.js"))
-    .pipe(gulp.dest(DEST))
-    .pipe(concat("app.min.js"))
-    .pipe(uglify())
-    .pipe(gulp.dest(DEST));
-});
+gulp.task("default", ['js','views','manifest', 'images']);
 
 gulp.task('js', ()=>{
   return gulp.src("src/js/index.js")
@@ -46,5 +38,5 @@ gulp.task('images', ()=>{
 });
 
 gulp.task('watch', function(){
-  gulp.watch('src/**', ['js','views', 'manifest', 'images']);
+  gulp.watch('src/**', ['default']);
 });
