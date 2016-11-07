@@ -1,0 +1,27 @@
+{
+  "name": "Optimizely User Agent Spoofer",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "",
+  "homepage_url": "http://www.optimizely.com",
+  "icons": {
+    "128": "images/phone-128-off.png"
+  },
+  "background": {
+    "scripts": [
+      "app.min.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "images/phone-128-off.png",
+    "default_title": "Optly User Agen Spoofer"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://app.optimizely.com/*",
+    "https://*/*",
+    "*://*/*"
+  ]
+}
