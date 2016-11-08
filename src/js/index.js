@@ -2,7 +2,8 @@ let isActive = false;
 
 const requestFilter = {
   urls: [
-    "*://*/*/?optimizely_p13n=true&optimizely_editor=true&optimizely_include_innie=true"
+    "*://*/*?optimizely_p13n=true&optimizely_editor=true&optimizely_include_innie=true",
+    "*://*/?optimizely_p13n=true&optimizely_editor=true&optimizely_include_innie=true"
   ]
 };
 
@@ -40,6 +41,5 @@ chrome.browserAction.onClicked.addListener((tab) => {
         path: "images/phone-128-" + state + ".png"
     };
   chrome.browserAction.setIcon(details);
-  isActive = !isActive;
-  initListener(isActive);
+  return isActive = !isActive;
 });
