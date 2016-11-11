@@ -1,6 +1,8 @@
 #Optimizely Editor Helper - User Agent Spoofer
 ---
 
+[Link to download extension](https://chrome.google.com/webstore/detail/optimizely-user-agent-spo/gchnncdnnopkgpbjilbpgcfnijnldbae/)
+
 On October 4th, Optimizely release the Optimizely X platform containing many powerful updates to the classic Optimizely A/B testing solution.
 
 One of these updates includes an easy to use visual editor built for responsive design sites. While powerful for responsive designs, this can make creating mobile web experiments for adaptive websites more difficult. That's why I built this Chrome Extension.
