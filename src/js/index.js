@@ -19,6 +19,12 @@ const userAgents = [
       name: 'MacOS Safari',
       ua: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125'
     }
+  },
+  {
+    'windows_edge': {
+      name: 'Windows Edge',
+      ua: 'Mozilla/5.0 (Windows NT 10.0; <64-bit tags>) AppleWebKit/<WebKit Rev> (KHTML, like Gecko) Chrome/<Chrome Rev> Safari/<WebKit Rev> Edge/<EdgeHTML Rev>.<Windows Build>'
+    }
   }
 ];
 
