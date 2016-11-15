@@ -13,6 +13,12 @@ const userAgents = [
       name: 'Apple iPhone 6',
       ua: 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B329 Safari/8536.25'
     }
+  },
+  {
+    'macos_safari': {
+      name: 'MacOS Safari',
+      ua: 'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/124 (KHTML, like Gecko) Safari/125'
+    }
   }
 ];
 
