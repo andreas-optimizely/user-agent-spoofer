@@ -15,7 +15,8 @@
   },
   "browser_action": {
     "default_icon": "images/phone-128-off.png",
-    "default_title": "Optly User Agen Spoofer"
+    "default_title": "Optly User Agen Spoofer",
+    "default_popup": "index.html"
   },
   "permissions": [
     "webRequest",
