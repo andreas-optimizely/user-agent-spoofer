@@ -46,12 +46,12 @@ function callback(details){
     }
   }
   // increment clicks by 1
-  clicks +== 1;
+  clicks += 1;
   if(j < headers.length) {
 
     // Removing statement below in favor of looping through user-agent options
     // headers[j].value = 'Mozilla/5.0 (iPhone; CPU iPhone OS 6_1_3 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B329 Safari/8536.25';
-    headers[j].value = userAgents[clicks - 1][0]['ua'];
+    headers[j].value = userAgents[clicks - 1][0]['ua']
 
   }
   return {requestHeaders: headers};
@@ -67,11 +67,11 @@ chrome.browserAction.onClicked.addListener((tab) => {
   // If user clicks 4 times, then it displays the inactive icon and changes the extension's 'isActive' variable to false
   if (clicks > 0 && clicks < 4) {
     let details = {
-      path: userAgents[clicks - 1][0]['img'];
+      path: userAgents[clicks - 1][0]['img']
     }
   } else {
     let details = {
-      path: 'images/phone-128-off.png';
+      path: 'images/phone-128-off.png'
     }
     return isActive = !isActive;
   }
