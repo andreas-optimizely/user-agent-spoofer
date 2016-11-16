@@ -60,11 +60,22 @@ function callback(details){
 
 chrome.webRequest.onBeforeSendHeaders.addListener(callback,requestFilter, ['requestHeaders','blocking']);
 chrome.browserAction.onClicked.addListener((tab) => {
-  // increments the number of clicks by one each time a user clicks on the logo
-  let state = isActive ? 'off' : 'on';
-  let details = {
-        path: "images/phone-128-" + state + ".png"
-    };
+  // Replace with condition that switches to off if icon clicked 4 times
+  // let state = isActive ? 'off' : 'on';
+
+  // If a user clicks 1 - 3 times (meaning the extension is active) then display the appropriate device icon
+  // If user clicks 4 times, then it displays the inactive icon and changes the extension's 'isActive' variable to false
+  if (clicks > 0 && clicks < 4) {
+    let details = {
+      path: userAgents[clicks - 1][0]['img'];
+    }
+  } else {
+    let details = {
+      path: 'images/phone-128-off.png';
+    }
+    return isActive = !isActive;
+  }
   chrome.browserAction.setIcon(details);
-  return isActive = !isActive;
+  // Remove in favor of determining if extension is active based on number of clicks
+  // return isActive = !isActive;
 });

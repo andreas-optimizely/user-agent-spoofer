@@ -14,7 +14,7 @@
     "persistent": true
   },
   "browser_action": {
-    "default_icon": "images/url_logo.png",
+    "default_icon": "images/phone-128-off.png",
     "default_title": "Optly User Agent Spoofer",
   },
   "permissions": [
